@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,69 +17,92 @@
         </h1>
     </header>
 
+
     <main>
         <div class="form">
             <form action="" id="form">
 
-                <label for="bun-select">Choose a bun:</label>
-                <select name="bun" id="bun-select">
-                    <option value="wheat">Wheat</option>
-                    <option value="white">White</option>
-                    <option value="texas toast">Texas Toast + $1.00</option>
-                </select>
-                <br><br>
+                <div class="left">
 
-                <label for="patty-temp">Patty temperature:</label>
-                <select name="patty" id="patty-temp">
-                    <option value="rare">Rare</option>
-                    <option value="medium-rare">Medium-Rare</option>
-                    <option value="medium">Medium</option>
-                    <option value="medium-well">Medium-Well</option>
-                    <option value="well-done">Well-Done</option>
-                </select>
-                <br><br>
+                    <h3>Build your burger:</h3>
 
+                    <label for="bun-select">Choose a bun:</label>
+                    <select name="bun" id="bun-select">
+                        <option value="white" id="white">White</option>
+                        <option value="wheat" id="wheat">Wheat</option>
+                        <option value="texas toast" id="toast">Texas Toast + $1.00</option>
+                    </select>
+                    <br><br>
 
-                <div id="lists"></div>
-
-
-                Vegetables: <br>
-                <input type="checkbox" name="lettuce" value="0.5" id="lettuce">Lettuce + $0.50 <br>
-                <input type="checkbox" name="tomato" value="0.5" id="tomato">Tomato + $0.30 <br>
-                <input type="checkbox" name="onion" value="0.4" id="onion">Onion + $0.70 <br>
-                <input type="checkbox" name="spinac" value="0.6" id="spinach">Spinach + $0.80 <br>
-                <input type="checkbox" name="pickle" value="0.5" id="pickle">Pickles + $0.40 <br><br>
+                    <label for="patty-temp">Patty temperature:</label>
+                    <select name="patty" id="patty-temp">
+                        <option value="rare">Rare</option>
+                        <option value="medium-rare">Medium-Rare</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="medium-well">Medium-Well</option>
+                        <option value="well-done">Well-Done</option>
+                    </select>
+                    <br><br>
 
 
-                Condiments: <br>
-                <input type="checkbox" name="ketchup" value="" id="ketchup">Ketchup + $0.50 <br>
-                <input type="checkbox" name="mustard" value="mustard" id="mustard">Mustard + $0.50 <br>
-                <input type="checkbox" name="mayo" value="mayo" id="mayo">Mayo + $0.50 <br>
-                <input type="checkbox" name="aioli" value="aioli" id="aioli">Aioli + $0.50 <br>
-                <input type="checkbox" name="secret-sauce" value="secret-sauce" id="secret">Secret Sauce + $0.50 <br>
-                <br>
+                    <div id="lists"></div>
 
 
-                <label for="side-choice">Choose a side:</label>
-                <select name="side" id="side-choice">
-                    <option value="nothing">No Side</option>
-                    <option value="fries">Fries + $2.00</option>
-                    <option value="chips">Chips + $1.50</option>
-                    <option value="salad">Salad + $2.50</option>
-                </select>
-                <br><br>
+                    Vegetables: <br>
+                    <input type="checkbox" name="lettuce" value="0.5" id="lettuce">
+                    <label for="lettuce" id="lettuceLabel"></label>
+                    <input type="checkbox" name="tomato" value="0.5" id="tomato">
+                    <label for="tomato" id="tomatoLabel"></label>
+                    <input type="checkbox" name="onion" value="0.4" id="onion">
+                    <label for="onion" id="onionLabel"></label>
+                    <input type="checkbox" name="spinac" value="0.6" id="spinach">
+                    <label for="spinac" id="spinachLabel"></label>
+                    <input type="checkbox" name="pickle" value="0.5" id="pickle">
+                    <label for="pickle" id="pickleLabel"></label><br>
 
-                Other Instructions:
-                <input type="text" name="instructions" value="" id='instructions'><br>
 
-                <br><br>
-                <input type="submit" value="Calculate Burger">
-                <br><br>
+                    Condiments: <br>
+                    <input type="checkbox" name="ketchup" value="" id="ketchup">
+                    <label for="ketchup" id="ketchupLabel"></label>
+                    <input type="checkbox" name="mustard" value="mustard" id="mustard">
+                    <label for="mustard" id="mustardLabel"></label>
+                    <input type="checkbox" name="mayo" value="mayo" id="mayo">
+                    <label for="mayo" id="mayoLabel"></label>
+                    <input type="checkbox" name="aioli" value="aioli" id="aioli">
+                    <label for="aioli" id="aioliLabel"></label>
+                    <input type="checkbox" name="secret-sauce" value="secret-sauce" id="secret">
+                    <label for="secret-sauce" id="secretLabel"></label>
+                    <br>
+
+
+                    <label for="side-choice">Choose a side:</label>
+                    <select name="side" id="side-choice">
+                        <option value="nothing">No Side</option>
+                        <option value="fries">Fries + $2.00</option>
+                        <option value="chips">Chips + $1.50</option>
+                        <option value="salad">Salad + $2.50</option>
+                    </select>
+                    <br><br>
+
+                    Other Instructions:
+                    <textarea rows="5" cols="30" name="instructions" value="" id='instructions'></textarea>
+                    <br><br>
+
+                    <input id="submit" type="submit" value="Calculate Burger">
+                </div>
+
+                <div class="right">
+
+
+
+                    <br>
             </form>
 
-            <div>
-                <h4 id="price"></h4>
+            <div class="bprice">
+                <h3>Burger Price:</h3><br>
+                <h4 id="price">$5.25</h4>
             </div>
+        </div>
 
         </div>
     </main>

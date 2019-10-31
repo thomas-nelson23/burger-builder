@@ -1,18 +1,70 @@
+html {
+    background-color: rgb(196, 246, 255);
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-content: center;
+    font-family: ubuntu;
 }
 
 header {
     margin: auto;
+    margin-top: 20px;
+    margin-bottom: 2vh;
+    font-size: calc(15px + 1vw);
 }
 
 main {
     margin: auto;
 }
 
+h3 {
+    text-align: center;
+    margin-top: 0px;
+}
+
 h4 {
     text-align: center;
     font-size: 3em;
+    margin-top: 0px;
 }
+
+#submit {
+    margin: auto;
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 56px;
+}
+
+textarea { 
+    display: block; 
+}
+
+form {
+    display: flex;
+}
+
+.right {
+    margin-left: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left {
+    background-color: rgba(236, 231, 223, 0.747);
+    margin: 0;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.bprice {
+    background-color: rgba(236, 231, 223, 0.747);
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+    border-radius: 20px;
+}
+
