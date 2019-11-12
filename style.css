@@ -9,15 +9,16 @@ body {
     font-family: ubuntu;
 }
 
+/* Element Selctors */
+form {
+    display: flex;
+}
+
 header {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 2vh;
     font-size: calc(15px + 1vw);
-}
-
-main {
-    margin: auto;
 }
 
 h3 {
@@ -31,26 +32,22 @@ h4 {
     margin-top: 0px;
 }
 
-#submit {
+main {
     margin: auto;
-    font-size: 15px;
-    padding: 5px;
-    margin-left: 56px;
 }
 
 textarea { 
     display: block; 
 }
 
-form {
-    display: flex;
-}
 
-.right {
-    margin-left: 15vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* Class Selectors */
+.bprice {
+    background-color: rgba(236, 231, 223, 0.747);
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+    border-radius: 20px;
 }
 
 .left {
@@ -60,11 +57,18 @@ form {
     border-radius: 20px;
 }
 
-.bprice {
-    background-color: rgba(236, 231, 223, 0.747);
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-top: 50px;
-    border-radius: 20px;
+.right {
+    margin-left: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+
+/* ID Selectors */
+#submit {
+    margin: auto;
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 56px;
+}

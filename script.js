@@ -26,7 +26,7 @@ let burgerPrice = 0;
 //variables for prices for each option
 const whitePrice = 0.25;
 const wheatPrice = 0.5;
-const toastPrice = 1;
+const toastPrice = 1.5;
 
 const lettucePrice = 0.3;
 const tomatoPrice = 0.25;
@@ -44,10 +44,8 @@ const friesPrice = 2;
 const chipsPrice = 1.5;
 const saladPrice = 2.5;
 
-
 let priceDiv = document.getElementById('price');
 let form = document.getElementById('form');
-
 
 //populates text on bun selector options
 document.getElementById("white").innerHTML = `White + $${whitePrice.toFixed(2)}`
@@ -67,7 +65,6 @@ document.getElementById("mustardLabel").innerHTML = `Mustard + $${mustardPrice.t
 document.getElementById("mayoLabel").innerHTML = `Mayo + $${mayoPrice.toFixed(2)} <br>`;
 document.getElementById("aioliLabel").innerHTML = `Aioli + $${aioliPrice.toFixed(2)} <br>`;
 document.getElementById("secretLabel").innerHTML = `Secret Sauce + $${secretPrice.toFixed(2)} <br>`;
-
 
 form.onsubmit = submit;
 
@@ -95,7 +92,6 @@ function submit(event) {
     if (side.value == "fries") { burgerPrice += friesPrice };
     if (side.value == "chips") { burgerPrice += chipsPrice };
     if (side.value == "salad") { burgerPrice += saladPrice };
-
 
     //inserts price text
     priceDiv.innerHTML = `$${burgerPrice.toFixed(2)}`;
